@@ -1,7 +1,9 @@
 import pygame
 
+# Definir Colores
+VERDE = (0, 255, 0)
 
-class Triangulo:
+class Circulo():
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -9,17 +11,15 @@ class Triangulo:
         self.color = (0, 50, 255)
 
     def dibujar(self, ventana):
-        # Vertices del triángulo
-        puntos = [(self.x, self.y), (self.x - 50, self.y + 100), (self.x + 50, self.y + 100)]
-        pygame.draw.polygon(ventana, self.color, puntos)
+        pygame.draw.circle(ventana, VERDE, (self.x, self.y), 30)
 
-    # Movimiento del triángulo según las teclas presionadas
+    # Movimiento del circulo según las teclas presionadas
     def mover(self, teclas):
-        if teclas[pygame.K_a]:
+        if teclas[pygame.K_LEFT]:
             self.x -= self.velocidad
-        if teclas[pygame.K_d]:
+        if teclas[pygame.K_RIGHT]:
             self.x += self.velocidad
-        if teclas[pygame.K_w]:
+        if teclas[pygame.K_UP]:
             self.y -= self.velocidad
-        if teclas[pygame.K_s]:
+        if teclas[pygame.K_DOWN]:
             self.y += self.velocidad
