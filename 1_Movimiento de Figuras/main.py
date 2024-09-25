@@ -6,7 +6,7 @@ from cuadrado import Cuadrado
 pygame.init()
 
 ventana = pygame.display.set_mode((800, 600)) 
-pygame.display.set_caption("Movimiento de Triangulo")
+pygame.display.set_caption("Movimiento de Figuras")
 
 background_color = (0, 0, 0)
 
