@@ -1,7 +1,6 @@
 import pygame
 
 from circulo import Circulo
-from circulo2 import Circulo2
 
 pygame.init()
 
@@ -13,7 +12,6 @@ VERDE = (0, 255, 0)
 
 
 circulo = Circulo(600, 100)
-circulo2 = Circulo2(200, 100)
 
 ventana = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Colisiones")
@@ -29,11 +27,9 @@ while running:
     
     teclas = pygame.key.get_pressed()
     circulo.mover(teclas)
-    circulo2.mover(teclas)
 
     ventana.fill(BLANCO)
 
     circulo.dibujar(ventana)
-    circulo2.dibujar(ventana)
 
     pygame.display.update()

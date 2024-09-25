@@ -1,6 +1,6 @@
 import pygame
 
-VERDE = (0, 255, 0)
+VERDE = (0, 187, 51)
 
 class Circulo2():
     def __init__(self, x, y):
